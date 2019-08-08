@@ -24,7 +24,7 @@ group '<my.group.id>'
 version = '1.0.0'
 
 GatewayConnection {
-    url = 'https://localhost:8444/restman'
+    url = 'https://localhost:8443/restman'
 }
 
 GatewayExportConfig {
