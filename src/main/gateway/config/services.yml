@@ -1,0 +1,10 @@
+drpg-example-001/example001:
+  url: "/example001"
+  policy: "drpg-example-001/example001"
+  httpMethods:
+  - "DELETE"
+  - "POST"
+  - "GET"
+  - "PUT"
+  properties: {}
+  wssProcessingEnabled: false
