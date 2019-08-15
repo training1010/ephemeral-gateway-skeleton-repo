@@ -8,3 +8,13 @@ drpg-example-001/example001:
   - "PUT"
   properties: {}
   wssProcessingEnabled: false
+jupiter/HelloWorld:
+  url: "/helloworld"
+  policy: "jupiter/HelloWorld"
+  httpMethods:
+  - "DELETE"
+  - "POST"
+  - "GET"
+  - "PUT"
+  properties: {}
+  wssProcessingEnabled: false
