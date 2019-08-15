@@ -1,0 +1,85 @@
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:L7p="http://www.layer7tech.com/ws/policy">
+    <wsp:All wsp:Usage="Required">
+        <L7p:HardcodedResponse>
+            <L7p:ResponseBody><![CDATA[API Gateway Hostname: ${gateway.cluster.hostname}
+Random Value: ${gateway.random}
+Current time: ${gateway.time}
+IP Address: ${ssgnode.ip}
+
+Request URL: ${request.url}
+Request Listen Port: ${request.tcp.listenPort}
+
+Remote IP: ${request.tcp.remoteAddress}
+Remote Port: ${request.tcp.remotePort}
+Request Client ID: ${request.clientid}
+Request Method: ${request.http.method}
+Is it using SSL: ${request.http.secure}
+
+Request URI: ${request.http.uri}
+Request Query Parameter(s): ${request.url.query}
+
+
+Service Name: ${service.name}
+Service OID: ${service.oid}
+Service Policy GUID: ${service.policy.guid} 
+Service Version: ${service.policy.version}
+Service URL: ${httpRouting.url}
+
+Policy Name: ${policy.name}
+Policy GUID: ${policy.guid}
+Policy Version: ${policy.version}
+
+Request:
+Size: ${request.mainpart.size}
+Content:
+
+${request.mainpart} 
+
+Request Header Values:
+${request.http.allheadervalues}
+
+Request Cookies: 
+${request.http.cookienames}
+ 
+Current audit level of the request: ${auditLevel}
+Audit Details:
+ 
+${audit.details}
+ 
+Listener Concurrency:
+${request.listener.concurrency}
+
+Core Concurrency: ${io.httpCoreConcurrency}
+Max Concurrency: ${io.httpMaxConcurrency}
+Is Keep Alive disabled? ${io.httpDisableKeepAlive}
+HTTP Version: ${io.httpVersion}
+Allow Wildcards: ${io.httpsHostAllowWildcard}
+Outbound IO Timeout: ${io.outTimeout}
+Incoming Request IO Minimum Rate Limit: ${io.rateLimit}
+Incoming IO Timeout: ${io.rateTimeout}
+
+Default JDBC Connection Driver Class List: 
+${jdbcConnection.driverClass.defaultList}
+
+Help URL: ${help.url}
+
+FIPS Enabled: ${security.fips.enabled}
+Service Metrics Collection: ${serviceMetrics.enabled}
+
+JavaScript Version: ${js.ecmaVersion}
+
+Build Detail: ${ssgnode.build.detail}
+Build Label: ${ssgnode.build.label} 
+Build Number: ${ssgnode.build.number}
+Build Version: ${ssgnode.build.version}
+Build Version Major: ${ssgnode.build.version.major}
+Build Version Minor: ${ssgnode.build.version.minor}
+Build Version Subminor: ${ssgnode.build.version.subminor}
+SSG Node Hostname: ${ssgnode.hostname}
+SSG Node ID: ${ssgnode.id}
+SSG Node IP: ${ssgnode.ip}
+SSG Node Name: ${ssgnode.name}]]></L7p:ResponseBody>
+            <L7p:ResponseContentType stringValue="text/plain; charset=UTF-8"/>
+        </L7p:HardcodedResponse>
+    </wsp:All>
+</wsp:Policy>

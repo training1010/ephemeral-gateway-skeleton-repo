@@ -18,3 +18,17 @@ jupiter/HelloWorld:
   - "PUT"
   properties: {}
   wssProcessingEnabled: false
+jupiter/Info:
+  url: "/info*"
+  policy: "jupiter/Info"
+  httpMethods:
+  - "OTHER"
+  - "HEAD"
+  - "DELETE"
+  - "POST"
+  - "GET"
+  - "OPTIONS"
+  - "PUT"
+  - "PATCH"
+  properties: {}
+  wssProcessingEnabled: false
